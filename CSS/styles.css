@@ -229,6 +229,7 @@ h3{
 .hero-section{
   background: linear-gradient(#4a1d18e8, #4a1d18ee), url(/Home-Page/img/bg-1.jpg);
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/Home-Page/img/bg-7.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/bg-1.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -697,6 +698,10 @@ header{
     width: 90%;
   }
 }
+
+/* @media screen and (max-width: 685px){
+  .used
+} */
 
 @media screen and (max-width: 680px){
   .inner{
