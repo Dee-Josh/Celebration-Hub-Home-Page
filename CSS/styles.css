@@ -699,9 +699,11 @@ header{
   }
 }
 
-/* @media screen and (max-width: 685px){
-  .used
-} */
+@media screen and (max-width: 685px){
+  .used-by{
+    padding: 0;
+  }
+}
 
 @media screen and (max-width: 680px){
   .inner{
