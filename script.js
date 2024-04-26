@@ -53,9 +53,27 @@ radioBoxes.forEach((box, index)=>{
 const chevronUp = document.querySelector('.fa-chevron-up');
 const moreDetails = document.querySelector('.more-details');
 
-chevronUp.addEventListener('click', ()=>{
+chevronUp && (chevronUp.addEventListener('click', ()=>{
     moreDetails.classList.toggle('show');
     chevronUp.classList.toggle('fa-chevron-up')
     chevronUp.classList.toggle('fa-chevron-down')
-})
+}))
 
+
+// For making the name entered in home page reflect in Get Started Page
+
+const getStartedBtn = document.querySelector(".get-started");
+
+getStartedBtn && getStartedBtn.addEventListener('click', ()=>{
+    const firstName = document.querySelector(".first-name").value;
+    const lastName = document.querySelector(".last-name").value;
+    const event = document.querySelector(".event").value;
+
+    let getStartedDetails = JSON.stringify({
+        firstName: firstName,
+        lastName: lastName,
+        event: event
+    })
+
+    localStorage.setItem("getStartedDetails", getStartedDetails);
+})
