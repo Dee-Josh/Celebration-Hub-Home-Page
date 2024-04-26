@@ -578,6 +578,8 @@ header{
 
 .gall img{
   width: 130px;
+  max-width: 25%;
+  height: inherit !important;
 }
 
 
@@ -633,6 +635,7 @@ header{
     max-width: 70%;
     justify-content: center;
     margin: auto;
+    margin-top: 40px;
   }
 }
 
@@ -699,9 +702,10 @@ header{
   }
 }
 
-@media screen and (max-width: 685px){
-  .used-by{
-    padding: 0;
+@media screen and (max-width: 690px){
+  .used-by h3{
+    padding: 10px;
+    bottom: 28px;
   }
 }
 
@@ -718,4 +722,19 @@ header{
     font-size: var(--small-font-size);
     padding: 5px 10px;
   }
+  .used-by h3{
+    width: 70%;
+    text-align: center;
+  }
+
+  .galls{
+    max-width: 100%;
+  }
+
+  .gall{
+    align-items: center;
+    gap: 20px;
+  }
+
+
 }
