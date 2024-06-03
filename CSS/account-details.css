@@ -396,8 +396,8 @@ header{
 }
 
 .status span{
-    font-size: calc(var(--h2-font-size) - 0px);
-    /* margin-right: 20px; */
+  font-size: calc(var(--h2-font-size) - 0px) !important;
+  /* margin-right: 20px; */
 }
 
 .curr-status{
@@ -415,6 +415,30 @@ header{
     background: linear-gradient(#4FACE9, 2%, #ff0059, 98%,  #4FACE9);
     color: white;
 }
+
+/* Mobile Status Indicator */
+
+.mobile-status{
+  /* background: linear-gradient(black, 2%, #ff0059, 98%,  black); */
+  display: none;
+  position: relative;
+  width: 230px;
+  text-align: center;
+  padding: 7px;
+  border-radius: 15px;
+  background: linear-gradient(#4FACE9, 2%, var(--color-dark), 98%,  #4FACE9);
+  color: var(--color-light);
+}
+
+.mobile-status span{
+  font-size: calc(var(--h3-font-size)) !important;
+}
+
+.mobile-status span span{
+  font-size: calc(var(--h2-font-size)) !important;
+}
+
+
 
 .indicator{
     position: absolute;
@@ -661,7 +685,35 @@ header{
   .open{
     transform: translate(0, 0);
   }
+}
 
+@media screen and (max-width: 770px){
+  /* REDUCING THE INDICATOR TO SINGLE */
+
+  .curr-status{
+    display: none;
+  }
+
+  .mobile-status{
+    background: linear-gradient(#4FACE9, 2%, #ff0059, 98%,  #4FACE9);
+    color: white;
+  }
+
+  .mobile-status .inside{
+    display: block;
+  }
+
+  .status h3{
+    font-size: var(--h3-font-size);
+  }
+
+  .mobile-status{
+    display: initial;
+  }
+
+  .create-website-h1{
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 730px){
@@ -704,6 +756,17 @@ header{
     width: 100%;
     padding: 15px;
     padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 540px){
+  .logo i, .logo h1{
+    font-size: var(--h1-font-size);
+    /* color: var(--color-light); */
+  }
+
+  .fa-bars{
+    font-size: var(--h1-font-size);
   }
 }
 

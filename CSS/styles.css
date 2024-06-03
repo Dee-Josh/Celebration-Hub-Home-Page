@@ -718,6 +718,16 @@ header{
 }
 
 @media screen and (max-width: 540px){
+
+  .logo i, .logo h1{
+    font-size: var(--h1-font-size);
+    /* color: var(--color-light); */
+  }
+
+  .fa-bars{
+    font-size: var(--h1-font-size);
+  }
+
   .about{
     font-size: var(--small-font-size);
     padding: 5px 10px;
@@ -735,6 +745,4 @@ header{
     align-items: center;
     gap: 20px;
   }
-
-
 }

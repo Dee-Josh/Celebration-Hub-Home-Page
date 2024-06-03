@@ -396,8 +396,16 @@ header{
 }
 
 .status span{
-    font-size: calc(var(--h2-font-size) - 0px);
-    /* margin-right: 20px; */
+  font-size: calc(var(--h2-font-size) - 0px) !important;
+  /* margin-right: 20px; */
+}
+
+.mobile-status span{
+  font-size: calc(var(--h3-font-size)) !important;
+}
+
+.mobile-status span span{
+  font-size: calc(var(--h2-font-size)) !important;
 }
 
 .curr-status{
@@ -411,20 +419,34 @@ header{
     color: var(--color-light);
 }
 
+/* Mobile Status Indicator */
+
+.mobile-status{
+  /* background: linear-gradient(black, 2%, #ff0059, 98%,  black); */
+  display: none;
+  position: relative;
+  width: 230px;
+  text-align: center;
+  padding: 7px;
+  border-radius: 15px;
+  background: linear-gradient(#4FACE9, 2%, var(--color-dark), 98%,  #4FACE9);
+  color: var(--color-light);
+}
+
 .indicator{
-    position: absolute;
-    bottom: -9px;
-    left: 50%;
-    transform: translate(-50%);
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  transform: translate(-50%);
     
 }
 
 .indicator .inside{
-    display: none;
-    width: 25px;
-    height: 25px;
-    background: linear-gradient(#ff005900, 0.7%, #ff0059);
-    transform: rotateZ(45deg);
+  display: none;
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(#ff005900, 0.7%, #ff0059);
+  transform: rotateZ(45deg);
 }
 
 .inner{
@@ -705,6 +727,42 @@ header{
 
 }
 
+@media screen and (max-width: 770px){
+  /* REDUCING THE INDICATOR TO SINGLE */
+
+  .curr-status{
+    display: none;
+  }
+
+  .status h3{
+    font-size: var(--h3-font-size);
+  }
+
+  .mobile-status{
+    display: initial;
+  }
+
+  /* FORM INPUT */
+
+  .inp{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    width: 100%;
+    justify-content: left;
+  }
+
+  .create-website-h1{
+    text-align: center;
+  }
+
+  .details{
+    margin-top: 20px;
+  }
+
+}
+
 @media screen and (max-width: 730px){
     .inner{
         padding: 20px;
@@ -746,5 +804,48 @@ header{
     padding: 15px;
     padding-bottom: 30px;
   }
+
+  .details .inp p{
+    font-size: var(--h3-font-size);
+  }
+
+  .inp input[type=text], .inp select{
+    width: 160px;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 10px;
+  }
+
+  .details-p span {
+    margin-left: 0;
+  }
+
+  .link-input{
+    width: 100% !important;
+    padding: 0px !important;
+    outline: none;
+    font-size: var(--normal-font-size);
+  }
+
+  .celebration-link p{
+    font-size: var(--normal-font-size);
+  }
+
+  .celebration-link p:last-of-type{
+    width: 474px !important;
+  }
 }
 
+@media screen and (max-width: 540px){
+
+  .logo i, .logo h1{
+    font-size: var(--h1-font-size);
+    /* color: var(--color-light); */
+  }
+
+  .fa-bars{
+    font-size: var(--h1-font-size);
+  }
+}

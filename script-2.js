@@ -29,3 +29,15 @@ lastName.addEventListener("keyup", ()=>{
 
 
 
+// FOR MOBILE INDICATOR
+
+const isMobileActive = document.querySelector('.mobile-status');
+const mobileIndicator = document.querySelector('.mobile-status .inside');
+
+
+if(isMobileActive.classList.contains('active')){
+    mobileIndicator.style.display = 'block';
+    isMobileActive.style.background = `linear-gradient(#4FACE9, 2%, #ff0059, 98%,  #4FACE9)`;
+    isMobileActive.style.color = `white`;
+}
+
