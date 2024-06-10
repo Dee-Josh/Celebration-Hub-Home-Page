@@ -551,7 +551,7 @@ header{
 /* For View all features */
 
 .view-features{
-  /* display: none; */
+  display: none;
   margin-top: 30px;
   text-align: center;
   font-size: calc(var(--normal-font-size) + 1px);
@@ -719,9 +719,24 @@ header{
   font-size: 18px;
 }
 
+/* Customer Info Container */
 
+.customer-info{
+  margin-top: 30px;
+}
 
+.customer-info h3{
+  margin-top: 15px;
+}
 
+.customer-info ul{
+  list-style: disc;
+  margin-left: 25px;
+}
+
+.customer-info ul li::marker{
+  color: var(--color-light);
+}
 
 
 /* FOOTER */
@@ -838,6 +853,10 @@ header{
     display: initial;
   }
 
+  .view-features{
+    display: block;
+  }
+
   .create-website-h1{
     text-align: center;
   }
@@ -906,4 +925,10 @@ header{
 
 .rotate{
   transform: rotateZ(180deg);
+}
+
+@media screen and (max-width: 540px) {
+  header .container {
+      padding: 0 15px;
+  }
 }

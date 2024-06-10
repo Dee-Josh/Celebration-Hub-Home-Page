@@ -628,3 +628,10 @@ header{
   }
 }
 
+
+@media screen and (max-width: 540px) {
+  header .container {
+      padding: 0 15px;
+  }
+}
+

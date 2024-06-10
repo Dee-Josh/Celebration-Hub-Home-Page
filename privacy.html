@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Get Started - Celebration Hub</title>
+    <title>Privacy Options - Celebration Hub</title>
 
     <link rel="shortcut icon" href="./img/logo.png">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./CSS/all.min.css">
-    <link rel="stylesheet" href="./CSS/account-details.css">
+    <link rel="stylesheet" href="./CSS/privacy.css">
 </head>
 <body>
 
@@ -83,7 +83,7 @@
                         <h3><span>1</span>About your loved one</h3>
                         <div class="indicator"><div class="inside"></div></div>
                     </div>
-                    <div class="curr-status active">
+                    <div class="curr-status">
                         <h3><span>2</span>Account Details</h3>
                         <div class="indicator"><div class="inside"></div></div>
                     </div>
@@ -91,45 +91,51 @@
                         <h3><span>3</span>Choose your plan</h3>
                          <div class="indicator"><div class="inside"></div></div>
                     </div>
-                    <div class="curr-status">
+                    <div class="curr-status active">
                         <h3><span>4</span>Privacy Options</h3>
                          <div class="indicator"><div class="inside"></div></div>
                     </div>
                     <!-- STATUS INDICATOR FOR MOBILE SCREENS -->
                     <div class="mobile-status active">
-                        <h3><span><span>2</span>/4</span>Account Details</h3>
+                        <h3><span><span>4</span>/4</span>Privacy Options</h3>
                         <div class="indicator"><div class="inside"></div></div>
                     </div>
                 </div>
-            </div>
-                <div class="sign-in">
-                    <div class="container">
-                        <!-- <h1 class="sign-in-h1">Sign In</h1> -->
-                        <div class="inner">
-                            <div class="left">
-                                <h2>With your social profile:</h2>
-                                <p><em>(This does not give us permission to post.)</em></p>
-                                <button>
-                                    <i class="fa-brands fa-facebook"></i>
-                                    <p>Sign with Facebook</p>
-                                </button>
-                                <button>
-                                    <i class="fa-brands fa-google"></i>
-                                    <p>Sign with Google</p>
-                                </button>
-                            </div>
-                            <h3 class="middle">Or</h2>
-                            <div class="right">
-                                <h2>With your email:</h2>
-                               <input class="inp-1" type="email">
-                               <p><input class="inp-2" type="checkbox"> I am visiting for the first time.</p> 
-                                <a href="./choose-plan.html">
-                                    <button>
-                                        <p>Continue</p>
-                                    </button>
-                                </a>
-                            </div>
+                <div class="inner">
+                    <h2>Choose privacy option:</h2>
+                    <p>
+                        Would you like to share your celebration website with others or keep it private?
+                        <br>
+                        <span>(This can be changed later.)</span>
+                    </p>
+
+                    <div class="privacy-options">
+                        <div class="privacy-option opt-1 radio">
+                            <input type="radio" name="radio-option-1" id="radio-option-1">
+                            <label for="radio-option-1">
+                                    <p>
+                                        All visitors can view and contribute.
+                                        <br>
+                                        <span>
+                                            Recommended for most celebration websites. This options allows easy access to the website and facilitates collaboration
+                                        </span>
+                                    </p>
+                            </label>
                         </div>
+                        <div class="privacy-option opt-2 radio">
+                            <input type="radio" name="radio-option-2" id="radio-option-2">
+                            <label for="radio-option-2">
+                                <p>
+                                    Visible only to me.
+                                    <br>
+                                    <span>
+                                        Choose this option if you do not want the celebration website to be visible to others at this time.
+                                    </span>
+                                </p>
+                            </label>
+                        </div>
+
+                        <button>Continue</button>
                     </div>
                 </div>
             </div>
@@ -145,9 +151,6 @@
             <p>Copyright &copy; 2024</p>
         </div>
     </div>
-
-    
-    
 
     <script src="./Scripts/script.js"></script>
 </body>
